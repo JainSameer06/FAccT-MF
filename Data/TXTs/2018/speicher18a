@@ -1,5 +1,5 @@
-Proceedings of Machine Learning Research 81:1–15, 2018 Conference on Fairness, Accountability, and Transparency
 Potential for Discrimination in Online Targeted Advertising
+Proceedings of Machine Learning Research 81:1–15, 2018 Conference on Fairness, Accountability, and Transparency
 Till Speicher tspeicher@mpi-sws.org
 MPI-SWS
 Muhammad Ali muali@mpi-sws.org
@@ -19,7 +19,7 @@ Univ. Grenoble Alpes, CNRS, Inria, Grenoble INP, LIG and MPI-SWS
 Alan Mislove amislove@ccs.neu.edu
 Northeastern University
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 Recently, online targeted advertising plat-
 forms like Facebook have been criticized for
 allowing advertisers to discriminate against
@@ -49,7 +49,7 @@ for mitigating discrimination in online tar-
 geted advertising.
 Keywords: Discrimination, advertising,
 Facebook
-1. Introduction
+1 INTRODUCTION
 Much recent work has focused on detecting in-
 stances of discrimination in online services rang-
 ing from discriminatory pricing on e-commerce
@@ -146,7 +146,7 @@ strate the perniciousness of the problem of dis-
 criminatory advertising in today’s ad platforms,
 it also lays the foundations for solving (i.e., de-
 tecting and mitigating) ad discrimination.
-2. Quantifying Ad Discrimination
+2 QUANTIFYING AD DISCRIMINATION
 Next, we begin by outlining different ad targeting
 methods offered by Facebook. We then discuss
 the current approach to determining whether an

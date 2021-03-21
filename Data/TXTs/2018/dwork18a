@@ -1,6 +1,5 @@
+Decoupled Classifiers for Group-Fair and Efficient Machine Learning
 Proceedings of Machine Learning Research 81:1–15, 2018 Conference on Fairness, Accountability, and Transparency
-Decoupled Classifiers for Group-Fair and Efficient Machine
-Learning
 Cynthia Dwork dwork@seas.harvard.edu
 Harvard University
 Nicole Immorlica nicimm@microsoft.com
@@ -10,7 +9,7 @@ Microsoft Research New England
 Max Leiserson mdml@cs.umd.edu
 University of Maryland
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 When it is ethical and legal to use a sen-
 sitive attribute (such as gender or race) in
 machine learning systems, the question re-
@@ -25,7 +24,7 @@ algorithm, to learn different classifiers for
 different groups. Transfer learning is used
 to mitigate the problem of having too little
 data on any one group.
-1. Introduction
+1 INTRODUCTION
 As algorithms are increasingly used to make de-
 cisions of social consequence, the social values
 encoded in these decision-making procedures are
@@ -284,7 +283,7 @@ are used in various real-world systems. As one
 example, Hassidim et al. (2017) describe using
 such features in an admissions matching system
 for masters students in Israel.
-2. Preliminaries
+2 PRELIMINARIES
 Let X = X1 ∪ X2 ∪ . . . ∪ XK be the set of pos-
 sible examples partitioned by group. The set of
 possible labels is Y and the set of possible classifi-

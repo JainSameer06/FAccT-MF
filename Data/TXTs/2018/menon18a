@@ -1,11 +1,11 @@
-Proceedings of Machine Learning Research 81:1–12, 2018 Conference on Fairness, Accountability, and Transparency
 The Cost of Fairness in Binary Classification
+Proceedings of Machine Learning Research 81:1–12, 2018 Conference on Fairness, Accountability, and Transparency
 Aditya Krishna Menon aditya.menon@anu.edu.au
 The Australian National University, Canberra, Australia
 Robert C. Williamson bob.williamson@anu.edu.au
 The Australian National University and DATA61, Canberra, Australia
 Editors: Sorelle Friedler and Christo Wilson
-Abstract
+ABSTRACT
 Binary classifiers are often required to possess
 fairness in the sense of not overly discriminating
 with respect to a feature deemed sensitive, e.g.
@@ -27,7 +27,7 @@ features’ class-probabilities. A practical impli-
 cation of our analysis is a simple approach to the
 fairness-aware problem which involves suitably
 thresholding class-probability estimates.
-1. Introduction
+1 INTRODUCTION
 Suppose we wish to learn a classifier to determine if
 an applicant will repay a loan. That is, given vari-
 ous input features about the applicant – such as their
@@ -170,7 +170,7 @@ us derive a practically usable algorithm, wherein we
 separately estimate class-probabilities for the target
 and sensitive features, e.g. by logistic regression, and
 combine them suitably (§5.2).
-2. Background and notation
+2 BACKGROUND AND NOTATION
 We fix notation and review background. Table 1 sum-
 marises some symbols that we frequently use.
 2.1. Standard learning from binary labels
@@ -1109,8 +1109,7 @@ cation without disparate mistreatment. In Interna-
 tional World Wide Web Conference (WWW), 2017.**
 
 Muhammad Bilal Zafar, Isabel Valera, Manuel
-Gomez-Rodriguez, and Krishna Gummadi.**
-
+Gomez-Rodriguez, and Krishna Gummadi.
 Learning fair classifiers. arXiv preprint
 arXiv:1507.05259, 2016.**
 

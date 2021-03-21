@@ -1,10 +1,9 @@
+Fairness in Machine Learning: Lessons from Political Philosophy
 Proceedings of Machine Learning Research 81:1–11, 2018 Conference on Fairness, Accountability, and Transparency
-Fairness in Machine Learning: Lessons from Political
-Philosophy
 Reuben Binns reuben.binns@cs.ox.ac.uk
 Department of Computer Science, University of Oxford, United Kingdom
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 What does it mean for a machine learning
 model to be ‘fair’, in terms which can be
 operationalised? Should fairness consist of
@@ -34,7 +33,7 @@ ing debates about fair machine learning.
 Keywords: fairness, discrimination,
 machine learning, algorithmic decision-
 making, egalitarianism
-1. Introduction
+1 INTRODUCTION
 Machine learning allows us to predict and clas-
 sify phenomena, by training models using labeled
 data from the real world. When consequential de-
@@ -194,8 +193,8 @@ bate. I provide an overview of some of this debate
 and finish with implications for the incorporation
 of ‘fairness’ into algorithmic decision-making sys-
 tems.
-2. What is discrimination, and
-what makes it wrong?
+2 WHAT IS DISCRIMINATION, AND
+WHAT MAKES IT WRONG?
 Early work which explored how to embed fair-
 ness constraints in machine learning used the
 term ‘discrimination-aware’ rather than ‘fair’.

@@ -1,6 +1,5 @@
+Interventions over Predictions: Reframing the Ethical Debate for Actuarial Risk Assessment
 Proceedings of Machine Learning Research 81:1–15, 2018 Conference on Fairness, Accountability, and Transparency
-Interventions over Predictions:
-Reframing the Ethical Debate for Actuarial Risk Assessment
 Chelsea Barabas cbarabas@media.mit.edu
 Karthik Dinakar karthik@media.mit.edu
 Joichi Ito joi@media.mit.edu
@@ -9,7 +8,7 @@ MIT Media Lab, 75 Amherst St. E15-245, Cambridge, MA 02139, United States
 Jonathan Zittrain a2jz@law.harvard.edu
 Harvard University, Griswold 505, 1525 Massachusetts Avenue, Cambridge, MA 02138, United States
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 Actuarial risk assessments might be unduly
 perceived as a neutral way to counteract
 implicit bias and increase the fairness of
@@ -48,7 +47,7 @@ ference away from predicting risk scores to
 risk mitigation.
 Keywords: causal inference, criminal jus-
 tice, interventions, risk assessment tools
-1. Introduction
+1 INTRODUCTION
 In 2016, a team of investigative journalists from
 ProPublica published an article (Angwin et al.,
 2016) claiming that COMPAS, a proprietary risk
@@ -96,8 +95,8 @@ a causal connection between a “treatment” and
 an outcome of interest, provides a more desirable
 framework for developing intervention-driven risk
 assessments in the criminal justice system.
-2. Current debates on the fairness
-of risk assessments
+2 CURRENT DEBATES ON THE FAIRNESS
+OF RISK ASSESSMENTS
 Risk assessment tools have been adopted to as-
 sist with a number of decision points through-
 out the criminal justice system, from pretrial

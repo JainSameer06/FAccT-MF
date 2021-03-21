@@ -1,5 +1,5 @@
+Runaway Feedback Loops in Predictive Policing
 Proceedings of Machine Learning Research 81:1–12, 2018 Conference on Fairness, Accountability, and Transparency
-Runaway Feedback Loops in Predictive Policing∗
 Danielle Ensign daniphye@gmail.com
 University of Utah
 Sorelle A. Friedler sorelle@cs.haverford.edu
@@ -11,7 +11,7 @@ University of Arizona
 Suresh Venkatasubramanian† suresh@cs.utah.edu
 University of Utah
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 Predictive policing systems are increasingly
 used to determine how to allocate police
 across a city in order to best prevent crime.
@@ -53,7 +53,7 @@ cannot entirely remove it without the in-
 terventions we suggest.
 Keywords: Feedback loops, predictive
 policing, online learning.
-1. Introduction
+1 INTRODUCTION
 Machine learning models are increasingly being
 used to make real-world decisions, such as who
 to hire, who should receive a loan, where to send
@@ -142,7 +142,7 @@ dies that can be used directly with these methods
 in a black-box fashion that improve their behav-
 ior, and provide theoretical justification for these
 remedies.
-2. Related Work
+2 RELATED WORK
 Our work builds most strongly on the work of
 Lum and Isaac (2016) described above, demon-
 strating the consequences of feedback loops in

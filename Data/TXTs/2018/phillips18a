@@ -1,12 +1,12 @@
+Interpretable Active Learning
 Proceedings of Machine Learning Research 81:1–13, 2018 Conference on Fairness, Accountability, and Transparency
-Interpretable Active Learning∗†
 Richard L. Phillips rlphillips@haverford.edu
 Haverford College
 Kyu Hyun Chang kyuhyun217@gmail.com
 Google Inc.‡
 Sorelle A. Friedler sorelle@cs.haverford.edu
 Haverford College
-Abstract
+ABSTRACT
 Active learning has long been a topic of
 study in machine learning. However, as
 increasingly complex and opaque models
@@ -53,7 +53,7 @@ clusters or automatically generated clusters
 based on the source of uncertainty.
 Keywords: Interpretability; Active learn-
 ing.
-1. Introduction
+1 INTRODUCTION
 The importance of interpretability and explain-
 ability of machine-learned decisions has recently
 been an area of active interest, with the EU
@@ -105,7 +105,7 @@ make active learning interpretable to expert la-
 belers, so that queries and query batches can be
 explained and the uncertainty bias can be tracked
 via interpretable clusters.
-2. Related Work
+2 RELATED WORK
 Active Learning Active learning has a long
 history detailed in a comprehensive survey by
 Settles (2009). Our work will focus on explain-
@@ -1098,7 +1098,7 @@ ACM SIGIR Conference on Research and De-
 velopment in Information Retrieval, pages 3–
 12, 1994.**
 
-Ross Quinlan. C4.5: Programs for Machine
+Ross Quinlan. C4,5: Programs for Machine
 Learning. Morgan Kaufmann Publishers, San
 Mateo, CA, 1993.**
 
@@ -1111,7 +1111,7 @@ using failed experiments. Nature, 533:73–76,
 May 5, 2016.**
 
 Marco Tulio Ribeiro, Sameer Singh, and Carlos
-Guestrin. “Why Should I Trust You?”: Ex-
+Guestrin. "Why Should I Trust You?": Ex-
 plaining the Predictions of Any Classifier. In
 Proc. ACM KDD, 2016.**
 

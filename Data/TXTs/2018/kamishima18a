@@ -1,5 +1,5 @@
+Recommendation Independence
 Proceedings of Machine Learning Research 81:1–15, 2018 Conference on Fairness, Accountability, and Transparency
-Recommendation Independence∗
 Toshihiro Kamishima mail@kamishima.net
 Shotaro Akaho s.akaho@aist.go.jp
 Hideki Asoh h.asoh@aist.go.jp
@@ -9,7 +9,7 @@ Jun Sakuma jun@cs.tsukuba.ac.jp
 University of Tsukuba, 1–1–1 Tennodai, Tsukuba, Ibaraki, Japan 305–8577; and
 RIKEN Center for Advanced Intelligence Project, 1–4–1 Nihonbashi, Chuo-ku, Tokyo, Japan 103-0027
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 This paper studies a recommendation algo-
 rithm whose outcomes are not influenced
 by specified information. It is useful in
@@ -49,7 +49,7 @@ mendation diversity.
 kamishima.net/iers/
 Keywords: Recommender System, Fair-
 ness, Independence
-1. Introduction
+1 INTRODUCTION
 A recommender system searches for items or in-
 formation predicted to be useful to users, and
 its influence on users’ decision-making has been
@@ -191,7 +191,7 @@ dislike like
 (b) independence-enhanced
 Figure 1: Distributions of the predicted ratings
 for each sensitive value
-2. Recommendation Independence
+2 RECOMMENDATION INDEPENDENCE
 This section provides a formal definition of rec-
 ommendation independence, and we show appli-
 cations of this concept for solving real problems.

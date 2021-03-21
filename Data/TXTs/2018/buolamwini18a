@@ -1,12 +1,11 @@
+Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification
 Proceedings of Machine Learning Research 81:1–15, 2018 Conference on Fairness, Accountability, and Transparency
-Gender Shades: Intersectional Accuracy Disparities in
-Commercial Gender Classification∗
 Joy Buolamwini joyab@mit.edu
 MIT Media Lab 75 Amherst St. Cambridge, MA 02139
 Timnit Gebru timnit.gebru@microsoft.com
 Microsoft Research 641 Avenue of the Americas, New York, NY 10011
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 Recent studies demonstrate that machine
 learning algorithms can discriminate based
 on classes like race and gender. In this
@@ -38,7 +37,7 @@ genuinely fair, transparent and accountable
 facial analysis algorithms.
 Keywords: Computer Vision, Algorith-
 mic Audit, Gender Classification
-1. Introduction
+1 INTRODUCTION
 Artificial Intelligence (AI) is rapidly infiltrating
 every aspect of society. From helping determine
 ∗ Download our gender and skin type balanced PPB
@@ -148,7 +147,7 @@ ing utilized in high-stakes sectors such as health-
 care and law enforcement, more work needs to
 be done in benchmarking vision algorithms for
 various demographic and phenotypic groups.
-2. Related Work
+2 RELATED WORK
 Automated Facial Analysis. Automated fa-
 cial image analysis describes a range of face per-
 ception tasks including, but not limited to, face
@@ -1008,47 +1007,42 @@ Fitzpatrick annotations for the Pilot Parliaments
 Benchmark.
 References**
 
-Face++ API. http://old.faceplusplus.com/
-demo-detect/. Accessed: 2017-10-06.**
+-. Face++ API. http://old.faceplusplus.com/
+demo-detect/. **
 
-Face, Google APIs for Android, Google De-
+-. Face, Google APIs for Android, Google De-
 velopers. https://developers.google.com/
 android/reference/com/google/android/
-gms/vision/face/Face. Accessed: 2017-10-
-06.**
+gms/vision/face/Face. **
 
-Watson Visual Recognition. https :
+-. Watson Visual Recognition. https :
 //www.ibm.com/watson/services/visual-
-recognition/. Accessed: 2017-10-06.**
+recognition/. **
 
-Microsoft Face API. https : / /
+-. Microsoft Face API. https : / /
 www.microsoft.com / cognitive - services /
-en-us/faceapi. Accessed: 2017-10-06.
-Affectiva Emotion Recognition Software and
-Analysis. https://www.affectiva.com/. Ac-
-cessed: 2017-10-06.**
+en-us/faceapi. **
 
-Physiognomys New Clothes. https : / /
+-. Affectiva Emotion Recognition Software and
+Analysis. https://www.affectiva.com/. **
+
+-. Physiognomys New Clothes. https : / /
 medium.com/@blaisea/physiognomys- new-
-clothes-f2d4b59fdd6a. Accessed: 2017-10-
-06.**
+clothes-f2d4b59fdd6a. **
 
-Face++ Terms of Use. a. Accessed: 2018-12-13.**
+-. Face++ Terms of Use. a.**
 
-Faception, Facial Personality Analytics. https:
-//www.faception.com/, b. Accessed: 2017-10-
-06.**
+-. Faception, Facial Personality Analytics. https:
+//www.faception.com/, b. **
 
-Visual Recognition API Reference. Accessed:
-2018-12-13.**
+-. Visual Recognition API Reference.**
 
-How to Detect Faces in Image. Accessed: 2018-
-12-13.**
+-. How to Detect Faces in Image. **
 
-Proportion of seats held by women in national
+-. Proportion of seats held by women in national
 parliaments. https://data.worldbank.org/
 indicator/SG.GEN.PARL.ZS?year high desc=
-true. Accessed: 2017-10-06.**
+true. **
 
 Syafeeza Ahmad Radzi, Khalil-Hani Mohamad,
 Shan Sung Liew, and Rabia Bakhteri. Con-

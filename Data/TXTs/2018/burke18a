@@ -1,6 +1,5 @@
+Balanced Neighborhoods for Multi-sided Fairness in Recommendation
 Proceedings of Machine Learning Research 81:1–13, 2018 Conference on Fairness, Accountability, and Transparency
-Balanced Neighborhoods for Multi-sided Fairness
-in Recommendation
 Robin Burke rburke@cs.depaul.edu
 Nasim Sonboli nsonboli@depaul.edu
 Aldo Ordoñez-Gauger aordone3@mail.depaul.edu
@@ -8,7 +7,7 @@ School of Computing
 DePaul University
 Chicago, Illinois
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 Fairness has emerged as an important cat-
 egory of analysis for machine learning sys-
 tems in some application areas. In extend-
@@ -38,7 +37,7 @@ minimal loss in ranking performance.
 Keywords: Recommender systems, fair-
 ness, multi-sided platform, sparse linear
 method
-1. Introduction
+1 INTRODUCTION
 Bias and fairness in machine learning are topics
 of considerable recent research interest Pedreshi
 et al. (2008); Dwork et al. (2012); Bozdag (2013).
@@ -211,7 +210,7 @@ organization’s social mission that may also value
 fair outcomes. All of these factors will govern
 how the platform values the different trade-offs
 associated with making recommendations.
-2. Multisided fairness
+2 MULTISIDED FAIRNESS
 Recommendation processes within multisided
 platforms can give rise to questions of multi-
 sided fairness. Namely, there may be fairness-

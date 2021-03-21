@@ -1,6 +1,5 @@
+Discrimination in Online Advertising: A Multidisciplinary Inquiry
 Proceedings of Machine Learning Research 81:1–15, 2018 Conference on Fairness, Accountability, and Transparency
-Discrimination in Online Advertising
-A Multidisciplinary Inquiry
 Amit Datta amitdatta@cmu.edu
 Anupam Datta danupam@cmu.edu
 Carnegie Mellon University
@@ -10,7 +9,7 @@ University of California, Berkeley
 Michael Carl Tschantz mct@icsi.berkeley.edu
 International Computer Science Institute
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 We explore ways in which discrimination
 may arise in the targeting of job-related
 advertising, noting the potential for multi-
@@ -31,7 +30,7 @@ classes without explicit instructions from
 advertisers to do so.
 Keywords: Discrimination, online adver-
 tising, law.
-1. Introduction
+1 INTRODUCTION
 Recent studies demonstrate that computer
 systems can discriminate, including by gen-
 der (Datta et al., 2015; Caliskan et al., 2017; Kay
@@ -155,7 +154,7 @@ tions on discriminatory employment practices, is
 ill equipped to advance the aims of equal treat-
 ment in a world where algorithms play an increas-
 ing role in decision making.
-2. Related Work
+2 RELATED WORK
 We are not the first to consider possible causes of
 discrimination in behavioral advertising. Datta
 et al. (2015) themselves consider the question.

@@ -1,11 +1,10 @@
+Privacy for All: Ensuring Fair and Equitable Privacy Protections
 Proceedings of Machine Learning Research 81:1–13, 2018 Conference on Fairness, Accountability, and Transparency
-Privacy for All: Ensuring Fair and Equitable Privacy
-Protections
 Michael D. Ekstrand∗ MichaelEkstrand@boisestate.edu
 Rezvan Joshaghani RezvanJoshaghani@u.boisestate.edu
 Hoda Mehrpouyan HodaMehrpouyan@boisestate.edu
 Department of Computer Science, College of Engineering, Boise State University, Boise, ID
-Abstract
+ABSTRACT
 In this position paper, we argue for ap-
 plying recent research on ensuring so-
 ciotechnical systems are fair and non-
@@ -36,7 +35,7 @@ policies intended to protect the users and
 subjects of information systems provide
 such protection in an equitable fashion.
 Keywords: Fairness, Privacy,
-1. Introduction
+1 INTRODUCTION
 Distinct ethical, legal, and social effects of tech-
 nology do not exist in isolation, but often interact
 in complex ways. Understanding these interac-
@@ -131,7 +130,7 @@ ularly in our interest in understanding who pays
 for and who benefits from any particular technol-
 ogy or policy, and in promoting technology that
 is equitable and participatory.
-2. Concept Background
+2 CONCEPT BACKGROUND
 Our argument is specifically about the interac-
 tion of fairness and privacy. Such an argument
 necessarily builds on the foundation of prior lit-

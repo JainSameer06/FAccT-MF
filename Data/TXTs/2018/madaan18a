@@ -1,6 +1,5 @@
+Analyze, Detect and Remove Gender Stereotyping from Bollywood Movies
 Proceedings of Machine Learning Research 81:1–14, 2018 Conference on Fairness, Accountability, and Transparency
-Analyze, Detect and Remove Gender Stereotyping from
-Bollywood Movies
 Nishtha Madaan nishthamadaan@in.ibm.com
 Sameep Mehta sameepmehta@in.ibm.com
 IBM Research-INDIA
@@ -12,7 +11,7 @@ Yatin Gupta yatingupta12@gmail.com
 MSIT Delhi
 Mayank Saxena mayank26saxena@gmail.com
 DTU-Delhi
-Abstract
+ABSTRACT
 The presence of gender stereotypes in many
 aspects of society is a well-known phe-
 nomenon. In this paper, we focus on
@@ -43,7 +42,7 @@ der biased graphs from unstructured piece
 of text in stories from movies and de-bias
 these graphs to generate plausible unbiased
 stories.
-1. Introduction
+1 INTRODUCTION
 Movies are a reflection of the society. They mir-
 ror (with creative liberties) the problems, issues,
 thinking & perception of the contemporary soci-
@@ -126,7 +125,7 @@ Which emotions are most commonly displayed by
 males and females in a movie trailer? Does this
 correspond with the gender stereotypes which ex-
 ist in society?
-2. Related Work
+2 RELATED WORK
 While there are recent works where gender bias
 has been studied in different walks of life Soklar-
 idis et al. (2017),(MacNell et al., 2015), (Carnes
@@ -947,7 +946,9 @@ our knowledge this is first study to use computa-
 tional tools to quantify and trend such biases.
 References**
 
-Hanah Anderson and Matt Daniels.
+Hanah Anderson and Matt Daniels. 
+Film Dialogue from 2,000 screenplays, 
+Broken Down by Gender and Age.
 https://pudding.cool/2017/03/film-dialogue/.
 2017.**
 
@@ -1010,7 +1011,7 @@ tions. In Proceedings of the 33rd Annual ACM
 Conference on Human Factors in Computing
 Systems, pages 3819–3828. ACM, 2015.**
 
-International Business Machines.
+-. International Business Machines.
 https://www.ibm.com/watson/developercloud/developer-
 tools.html. 2017.**
 

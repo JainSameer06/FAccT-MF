@@ -1,6 +1,5 @@
+A case study of algorithm-assisted decision making in child maltreatment hotline screening decisions
 Proceedings of Machine Learning Research 81:1–15, 2018 Conference on Fairness, Accountability, and Transparency
-A case study of algorithm-assisted decision making in child
-maltreatment hotline screening decisions
 Alexandra Chouldechova achould@cmu.edu
 Heinz College
 Carnegie Mellon University
@@ -16,7 +15,7 @@ Centre for Social Data Analytics
 Auckland University of Technology
 Auckland, New Zealand
 Editors: Sorelle A. Friedler and Christo Wilson
-Abstract
+ABSTRACT
 Every year there are more than 3.6 mil-
 lion referrals made to child protection agen-
 cies across the US. The practice of screen-
@@ -50,7 +49,7 @@ USA. We discuss the results of our analy-
 sis to-date, and also highlight key problems
 and data bias issues that present challenges
 for model evaluation and deployment.
-1. Introduction
+1 INTRODUCTION
 Every year there are more than 3.6 million refer-
 rals made to child protection agencies across the
 US. It is estimated that 37% of US children are
@@ -196,7 +195,7 @@ sioned by the County. Section 5 concludes with a
 reflection on several of the key outstanding tech-
 nical challenges affecting the evaluation and im-
 plementation of the model.
-2. The Allegheny Models
+2 THE ALLEGHENY MODELS
 Allegheny County is a medium size county in
 Pennsylvania, USA, centered on the city of Pitts-
 burgh. In 2014, Allegheny County’s Department

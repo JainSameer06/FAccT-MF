@@ -1,5 +1,4 @@
-SIREN: A Simulation Framework for Understanding the Eects
-of Recommender Systems in Online News Environments
+SIREN: A Simulation Framework for Understanding the Effects of Recommender Systems in Online News Environments
 Dimitrios Bountouridis∗, Jaron Harambam†, Mykola Makhortykh‡, Mónica Marrero∗, Nava
 Tintarev∗, Claudia Hau∗
 ∗Delft University of Technology, The Netherlands
