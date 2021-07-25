@@ -56,8 +56,7 @@ class GraphGenerator:
 		nodeIdList = []
 		with open(nodeIdPath, 'r') as f:
 			for line in f:
-				nodeIdList.append(line.split('\t')[0])
-		nodeIdList = list(map(int, nodeIdList))
+				nodeIdList.append(line.split('\t')[1].strip('\n'))
 		print(nodeIdList)
 		return nodeIdList
 
@@ -113,16 +112,15 @@ class GraphGenerator:
 					self.node_records[node] = item
 			except KeyError:
 				pass
-		extractedFile = os.path.join(os.path.dirname(self.sourceFilePath), "extracted_records.json")
+		extractedFile = os.path.join(os.path.dirname(self.sourceFilePath), "extracted_records_v13.json")
 		with open(extractedFile, 'w') as f_write:		
 			json.dump(self.node_records, f_write, indent = 0)
 
 	def edge_list(self):
 		edge_list = []
-		edgelistFile = os.path.join(os.path.dirname(self.sourceFilePath), "extracted_records_edgelist.dat")
+		edgelistFile = os.path.join(os.path.dirname(self.sourceFilePath), "extracted_records_edgelist_v13.dat")
 		with open(edgelistFile, 'w') as f_write:	
 			for node_id, node_record in self.node_records.items():
-				node_id = int(node_id)
 				if "references" in node_record:
 					references = node_record["references"]
 					for reference_id in references:
@@ -146,7 +144,6 @@ class GraphGenerator:
 			self.G.add_edge(node_id, reference_id)
 
 		for node_id, node_record in self.node_records.items():
-			node_id = int(node_id)
 			if node_id in self.G.nodes:
 				nx.set_node_attributes(self.G, {node_id: {"article_title": node_record["title"]}})
 		print("Number of nodes in the graph: ", len(self.G.nodes))
