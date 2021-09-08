@@ -12,6 +12,7 @@ import numpy as np
 import subprocess
 
 #python extract_from_json.py ../dblp.v12.json /home/sameer/Projects/Political-leaning/clusters_0.csv
+# python extract_from_json.py /home/sameer/Projects/Political-leaning/dblpv13.json /home/sameer/Projects/Political-leaning/cl_exp-1_temp louvain_dir /home/sameer/Projects/Political-leaning/idCompare.txt 
 #python extract_from_json.py /home/sameer/Projects/Political-leaning/extracted_l1.json /home/sameer/Projects/Political-leaning/cl_exp-1 --skip_extraction
 #python extract_from_json.py /home/sameer/Projects/Political-leaning/extracted_l1.json /home/sameer/Projects/Political-leaning/cl_exp-os-1 louvain_dir /home/sameer/Projects/Political-leaning/idCompare.txt /home/sameer/Projects/Political-leaning/OSLOM2/Graph/extracted_records_edgelist.dat_oslo_files/tp1 --skip_extraction
 
@@ -56,7 +57,7 @@ class GraphGenerator:
 		nodeIdList = []
 		with open(nodeIdPath, 'r') as f:
 			for line in f:
-				nodeIdList.append(line.split('\t')[1].strip('\n'))
+				nodeIdList.append(line.strip('\n'))
 		print(nodeIdList)
 		return nodeIdList
 
@@ -69,9 +70,10 @@ class GraphGenerator:
 			try:
 				#if ("Fairness" in item["venue"]["raw"] or "fairness" in item["venue"]["raw"]) and ("Accountability" in item["venue"]["raw"] or "accountability" in item["venue"]["raw"]) and ("conference" in item["venue"]["raw"] or "Conference" in item["venue"]["raw"]):
 				#print(item["id"])
-				if item["id"] in self.nodeIdList:
+				item_id = item["_id"] if type(item["_id"]) is not dict else item["_id"]["$oid"]
+				if item_id in self.nodeIdList:
 					print("matched")
-					node = item["id"]
+					node = item_id
 					self.node_levels[node] = 0
 					if "references" in item:
 						for reference in item["references"]:
@@ -86,8 +88,9 @@ class GraphGenerator:
 			if i % 1000000 == 0:
 				print(i, " second pass")
 			try:
-				if item["id"] in self.node_levels and self.node_levels[item["id"]] == 1:
-					node = item["id"]
+				item_id = item["_id"] if type(item["_id"]) is not dict else item["_id"]["$oid"]
+				if item_id in self.node_levels and self.node_levels[item_id] == 1:
+					node = item_id
 					if "references" in item:
 						for reference in item["references"]:
 							if reference not in self.node_levels:
@@ -107,8 +110,9 @@ class GraphGenerator:
 			if i % 1000000 == 0:
 				print(i, "extraction first pass")
 			try:
-				if item["id"] in self.node_levels:
-					node = item["id"]
+				item_id = item["_id"] if type(item["_id"]) is not dict else item["_id"]["$oid"]
+				if item_id in self.node_levels:
+					node = item_id
 					self.node_records[node] = item
 			except KeyError:
 				pass
@@ -393,9 +397,7 @@ def main():
 	g = G.generate_network()
 
 	partition_main = Partition(g, 1, algorithm, partition_filepath)
-	print(g.nodes[905619])
 	print(partition_main.nodeview)
-	print(partition_main.nodeview[905619])
 	print ("Modularity: ", community_louvain.modularity(partition_main.nodeview, g))
 
 	filePath = os.path.join(destinationDirectoryPath, "main.csv")
