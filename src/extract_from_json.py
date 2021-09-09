@@ -10,6 +10,7 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 import subprocess
+import pandas as pd
 
 #python extract_from_json.py ../dblp.v12.json /home/sameer/Projects/Political-leaning/clusters_0.csv
 # python extract_from_json.py /home/sameer/Projects/Political-leaning/dblpv13.json /home/sameer/Projects/Political-leaning/cl_exp-1_temp louvain_dir /home/sameer/Projects/Political-leaning/idCompare.txt 
@@ -221,6 +222,7 @@ class Partition:
 
 			# Template: ./community graph.bin -l -1 -v > graph.tree
 			options = ['-l', '-1', '-v', '-s', '1']
+			command = [community_script] + [graph_binfile] + options
 			with open(graph_partition_treefile, 'w') as f, open(community_errorlogfile, 'w') as f_err:
 				subprocess.run(command, stdout = f, stderr = f_err)
 
@@ -256,15 +258,14 @@ class Partition:
 			self.renumber_dict[node] = count
 			self.reverse_renumber_dict[count] = node
 			count += 1
-		"""	
-		renumber_filepath = input("Enter the path to store the renumbered file\n")
+			
 		with open(renumber_filepath, 'w') as f:
 			for edge in self.G.edges:
 				node_1 = self.renumber_dict[edge[0]]
 				node_2 = self.renumber_dict[edge[1]]
 				##print(node_1, node_2)
 				f.write("{node1} {node2}\n".format(node1 = node_1, node2 = node_2))
-		"""
+		
 	def node_to_label_view(self):
 		"""Assumes the calling object has a populated node view; uses this label view to construct and populate the corresponding label view."""
 		labelview_dict = {}
