@@ -48,7 +48,7 @@ class GraphGenerator:
 		self.sourceFilePath = sourceFilePath
 		self.sourceFile = open(sourceFilePath, 'r')
 		self.extracted = extracted
-		self.G = nx.Graph()
+		self.G = nx.DiGraph()
 
 		if nodeIdPath is not None:
 			self.nodeIdList = self.get_nodeId_list(nodeIdPath)
@@ -163,15 +163,19 @@ class Partition:
 		The graph whose partition the current object stores
 	algorithm: str
 		The algorithm used for community detection. Louvain or OSLOM.
-	partition_filepath: str
-		Path to file containing OSLOM partition.
+	algorithm_datapath: str
+		Path to algorithm specific input data format and/or implementations.
+		1. For Louvain, this is not requied.
+		2. For OSLOM, this is the path to the file containing the partition
+		3. For Infomap, this is the path to the file containing the partition
+		4. For Directed Louvain, this is the that stores the DirectedLouvain implementation, i.e., it should contain the bin folder
 	nodeview : dictionary
 		A dictionary describing a partition by mapping nodes to partition labels. Example: {node_1: label_1, ..., node_k: label_k}
 	labelview : dictionary
 		A dictionary describing a partition by mapping partition label to a list of nodes belonging to that partition. Example: {label_1: [list of label_1 nodes], ..., label_k: [list of label_k nodes]}
 	"""
 
-	def __init__(self, G, rand, algorithm, partition_filepath = None, graph_filepath = None):
+	def __init__(self, G, rand, algorithm, algorithm_datapath = None, out_filepath_suffix = None):
 		
 		self.G = G
 		self.algorithm = algorithm
@@ -192,31 +196,42 @@ class Partition:
 			self.sort_labelview()
 			self.reassign_labels()
 		if self.algorithm == "louvain_dir":
-			self.node_renumber()
-			# ./convert -i graph.txt -o graph.bin
-			directed_louvain_binpath = "/home/sameer/Projects/Political-leaning/DirectedLouvain/DirectedLouvain/bin"
+			print("Implementing Partition through directed Louvain")
+			# If louvain_directed algorithm is to be used, the algorithm_datapath argument to the constructor should be such that it contains the bin folder.
+			directed_louvain_binpath = os.path.join(algorithm_datapath, "bin")
 
 			convert_script = os.path.join(directed_louvain_binpath, 'convert')
 			community_script = os.path.join(directed_louvain_binpath, 'community')
 			hierarchy_script = os.path.join(directed_louvain_binpath, 'hierarchy')
 
-			out_directory = '/home/sameer/Projects/Political-leaning/DirectedLouvain'
-			graph_txtfile = os.path.join(out_directory, 'sample.txt')
-			graph_binfile = os.path.join(out_directory, 'sample.bin')
-			graph_partition_treefile = os.path.join(out_directory, 'sample.tree')
-			graph_partition_communityfile = os.path.join(out_directory, 'sample_communities')
+			out_directory = os.path.join(algorithm_datapath, "Output" + "_" + str(out_filepath_suffix))
+			if not os.path.exists(out_directory):
+				os.makedirs(out_directory)
+			graph_txtfile = os.path.join(out_directory, 'renumbered_graph.txt')
+			graph_binfile = os.path.join(out_directory, 'graph.bin')
+			graph_partition_treefile = os.path.join(out_directory, 'graph.tree')
+			graph_partition_communityfile = os.path.join(out_directory, 'graph_communities')
+			community_errorlogfile = os.path.join(out_directory, "error_log.txt")
 
+			self.node_renumber(graph_txtfile)
+
+			# Template: ./convert -i graph.txt -o graph.bin
 			command = [convert_script] + ['-i'] + [graph_txtfile] + ['-o'] + [graph_binfile]
 			subprocess.run(command)
 
-			# ./community graph.bin -l -1 -v > graph.tree
-			options = ['-l', '-1', '-v']
-			command = [community_script] + [graph_binfile] + options
-			with open(graph_partition_treefile, 'w') as f:
-				subprocess.run(command, stdout = f)
+			# Template: ./community graph.bin -l -1 -v > graph.tree
+			options = ['-l', '-1', '-v', '-s', '1']
+			with open(graph_partition_treefile, 'w') as f, open(community_errorlogfile, 'w') as f_err:
+				subprocess.run(command, stdout = f, stderr = f_err)
 
-			# ./hierarchy graph.tree -l 2 > graph_node2comm_level2
-			options= ['-l', '4']
+			# Extracting the highest level of community detection from the errorlogfile.
+			for line in reversed(open(community_errorlogfile).readlines()):
+				if "level"in line:
+					max_level = line.rstrip().strip(":").split()[1]
+					break
+
+			# Template: ./hierarchy graph.tree -l 2 > graph_node2comm_level2
+			options = ['-l', str(max_level)]
 			command = [hierarchy_script] + [graph_partition_treefile] + options
 			with open(graph_partition_communityfile, 'w') as f:
 				subprocess.run(command, stdout = f)
@@ -233,7 +248,7 @@ class Partition:
 			self.sort_labelview()
 			self.reassign_labels()
 
-	def node_renumber(self):
+	def node_renumber(self, renumber_filepath):
 		count = 1
 		self.renumber_dict = {}
 		self.reverse_renumber_dict = {}
@@ -251,7 +266,7 @@ class Partition:
 				f.write("{node1} {node2}\n".format(node1 = node_1, node2 = node_2))
 		"""
 	def node_to_label_view(self):
-		"""Converts the node view of a partition to a label view."""
+		"""Assumes the calling object has a populated node view; uses this label view to construct and populate the corresponding label view."""
 		labelview_dict = {}
 		for node, label in self.nodeview.items():
 			if label not in labelview_dict:
@@ -260,6 +275,7 @@ class Partition:
 		return labelview_dict
 
 	def label_to_node_view(self):
+		"""Assumes the calling object has a populated label view; uses this label view to construct and populate the corresponding node view."""
 		nodeview_dict = {}
 		for label, nodelist in self.labelview.items():
 			for node in nodelist:
@@ -290,12 +306,9 @@ class Partition:
 		return nodeview
 
 	def sort_labelview(self):
-		"""Modifies the labelview; sorts each component of the partition (in the labelview) by degree.
-
-		Returns
-		-------
-		sorted_labelview_dict: dict
-			A dictionary describing a partition by mapping partition label to a list of nodes belonging to that partition, such that each list is sorted in descending order by node degree.
+		""" 
+		Modifies the labelview; sorts each component of the partition (in the labelview) by degree.
+		The modified labelview is a dictionary describing a partition by mapping partition label to a list of nodes belonging to that partition, such that each list is sorted in descending order by node degree.
 
 		"""
 		sorted_labelview_dict = {}
@@ -305,7 +318,8 @@ class Partition:
 		self.labelview = sorted_labelview_dict
 
 	def reassign_labels(self):
-		"""Reassigns component labels (in both the labelview and the nodeview) such that lower labels correspond to larger components.
+		""" 
+		Reassigns component labels (in both the labelview and the nodeview) such that lower labels correspond to larger components.
 		Example: If the original labelview is {0: [1, 2, 3], 1: [4, 5, 6, 7], 2: [8, 9]}, the output labelview will be the dict {0: [4, 5, 6, 7], 1: [1, 2, 3], 2: [8, 9]}. Correspondingly, modifies the original nodeview ({1:0, 2:0, .... 8:2, 9:2}) to match the labels as in the new labelview ({4:0, 5:0, ... 8:2, 9:2})
 		"""
 
@@ -345,6 +359,7 @@ def incommunity_edges(subgraph):
 def write_components_to_csv(filePath, labelview_dict, g):
 	with open(filePath, 'w', newline='') as csvfile:
 		csv_writer = csv.writer(csvfile)
+		csv_writer.writerow(["component_label", "node_id", "article_title", "degree"])
 		for component_label in sorted(labelview_dict.keys()): 
 			component = labelview_dict[component_label]
 			for node in component:
@@ -357,18 +372,18 @@ def plot_graph(G):
 	widths = nx.get_edge_attributes(G, 'weight')
 
 	nx.draw_networkx_nodes(G, pos,
-	                       nodelist=G.nodes(),
-	                       node_size=500,
-	                       node_color='black',
-	                       alpha=0.7)
-	nx.draw_networkx_edges(G, pos,
-	                       edgelist = widths.keys(),
-	                       width=[adjusted_width / 25 for adjusted_width in list(widths.values())],
-	                       edge_color='orange',
-	                       alpha=0.6)
+						   nodelist=G.nodes(),
+						   node_size=500,
+						   node_color='black',
+						   alpha=0.7)
+	nx.draw_networkx_edges(G, pos, connectionstyle='arc3, rad = 0.1',
+						   edgelist = widths.keys(),
+						   width=[adjusted_width / 25 for adjusted_width in list(widths.values())],
+						   edge_color='orange',
+						   alpha=0.6)
 	nx.draw_networkx_labels(G, pos=pos,
-	                        labels=label_dict,
-	                        font_color='white')
+							labels=label_dict,
+							font_color='white')
 
 	plt.show()
 
@@ -378,15 +393,15 @@ def main():
 	parser.add_argument('sourceFilePath', type = str, help = "Path to the Aminer json file or the extracted node file")
 	parser.add_argument('destinationDirectoryPath', type = str, help = "Path to the destination (cluster) directory")
 	parser.add_argument('algorithm', type = str, help = "Community detection algorithm. Choose from louvain and oslom")
-	parser.add_argument('nodeIdPath', type = str, help = "Path to the file listing FAccT IDs")
-	parser.add_argument('partition_filepath', nargs = '?', default = None)
+	parser.add_argument('algorithm_datapath', type = str, help = "Path to algorithm specific input data format and/or implementations")
+	parser.add_argument('nodeIdPath', nargs = '?', default = None)
 	parser.add_argument("--skip_extraction", default = False, action = 'store_true', help = "True if nodes have already been extracted from Aminer. In this case, the path argument gives the path to the extracted file. False by default.")
 	
 	args = parser.parse_args()
 	sourceFilePath = args.sourceFilePath
 	destinationDirectoryPath = args.destinationDirectoryPath
 	algorithm = args.algorithm
-	partition_filepath = args.partition_filepath
+	algorithm_datapath = args.algorithm_datapath
 	skip_extraction = args.skip_extraction
 	nodeIdPath = args.nodeIdPath
 
@@ -396,17 +411,17 @@ def main():
 	G = GraphGenerator(sourceFilePath, skip_extraction, nodeIdPath)
 	g = G.generate_network()
 
-	partition_main = Partition(g, 1, algorithm, partition_filepath)
+	partition_main = Partition(g, 1, algorithm, algorithm_datapath)
 	print(partition_main.nodeview)
-	print ("Modularity: ", community_louvain.modularity(partition_main.nodeview, g))
+	# print ("Modularity: ", community_louvain.modularity(partition_main.nodeview, g))
 
 	filePath = os.path.join(destinationDirectoryPath, "main.csv")
 	write_components_to_csv(filePath, partition_main.labelview, g)
 
-	if algorithm == "louvain":
+	if algorithm in ["louvain", "louvain_dir"]:
 		for component_label, component in partition_main.labelview.items():
 			subgraph_g = g.subgraph(component)
-			partition_sub = Partition(subgraph_g, 1)
+			partition_sub = Partition(subgraph_g, 1, "louvain_dir", algorithm_datapath, component_label)
 			filePath = os.path.join(destinationDirectoryPath, "component_" + str(component_label) + ".csv")
 			write_components_to_csv(filePath, partition_sub.labelview, subgraph_g)
 
@@ -414,6 +429,7 @@ def main():
 	edgeRatio_filePath = os.path.join(destinationDirectoryPath, "edgeratios.csv")
 	with open(edgeRatio_filePath, 'w', newline='') as edge_csvfile:
 		edge_csv_writer = csv.writer(edge_csvfile)
+		edge_csv_writer.writerow(["Component label", "Within community edges [IN]", "Out of community edges [OUT]", "IN / (IN + OUT)"])
 		for component_label, component in partition_main.labelview.items():
 			subgraph_g = g.subgraph(component)
 			in_edges = incommunity_edges(subgraph_g)
@@ -422,9 +438,13 @@ def main():
 
 	induced = community_louvain.induced_graph(partition_main.nodeview, g)
 
-	adjacency_matrix_induced = nx.linalg.graphmatrix.adjacency_matrix(induced, nodelist = range(len(induced.nodes))).toarray()
+	num_nodes_induced = len(induced.nodes)
+	header_list = [str(i) for i in range(num_nodes_induced)]
+	adjacency_matrix_induced = nx.linalg.graphmatrix.adjacency_matrix(induced, nodelist = range(num_nodes_induced)).toarray()
 	edgeWeights_filePath = os.path.join(destinationDirectoryPath, "edgeweights.csv")
-	np.savetxt(edgeWeights_filePath, adjacency_matrix_induced, delimiter = ",")
+	adj_matrix_df = pd.DataFrame(data = adjacency_matrix_induced, index = header_list, columns = header_list)
+	adj_matrix_df.to_csv(edgeWeights_filePath)
+	#np.savetxt(edgeWeights_filePath, adjacency_matrix_induced, delimiter = ",", header = column_header)
 
 	plot_graph(induced)
 
