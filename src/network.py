@@ -12,7 +12,7 @@ import subprocess
 import pandas as pd
 from collections import Counter
 
-# python network.py /home/sameer/Projects/Political-leaning/extracted_records_v13.json /home/sameer/Projects/Political-leaning/newalg_cd louvain_dir /home/sameer/Projects/Political-leaning/DirectedLouvain/DirectedLouvain/ /home/sameer/Projects/Political-leaning/ALLIDS --skip_extraction
+# python network.py /home/sameer/Projects/Political-leaning/extracted_records_v13.json /home/sameer/Projects/Political-leaning/newalg_cd louvain_dir /home/sameer/Projects/Political-leaning/Directedlouvain/DirectedLouvain/ /home/sameer/Projects/Political-leaning/ALLIDS --skip_extraction
 
 class GraphGenerator:
 	"""
