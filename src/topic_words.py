@@ -10,6 +10,7 @@ from itertools import groupby
 from collections import Counter
 from nltk.corpus import stopwords
 
+# python topic_words.py /home/sameer/Projects/Political-leaning/newalg_cd
 def natural_sort(l): 
     convert = lambda text: int(text) if text.isdigit() else text.lower()
     alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', key)]
@@ -23,10 +24,11 @@ def most_common_in_community(component_filepath):
 
 	stop_words = nltk.corpus.stopwords.words()
 
+	result = []
+
 	for community_index, community_list in enumerate(title_freq_list_split):	
 		count_dict_weighted = {}
 		count_dict_unweighted = {}
-		print("Entered community loop")
 		for article_index, article_title_freq in enumerate(community_list):
 			article_title = article_title_freq[0]
 			article_freq = int(article_title_freq[1])
@@ -34,16 +36,17 @@ def most_common_in_community(component_filepath):
 			title_words = [word for word in title_string.lower().split() if word not in stop_words]
 			
 			for word in title_words:
-				if word not in count_dict:
+				if word not in count_dict_weighted:
 					count_dict_weighted[word] = article_freq
 				else:
 					count_dict_weighted[word] += article_freq
 
 			for word in title_words:
-				if word not in count_dict:
-					count_dict_unweighted[word] = article_freq
+				if word not in count_dict_unweighted:
+					count_dict_unweighted[word] = 1
 				else:
-					count_dict_unweighted[word] += article_freq
+					count_dict_unweighted[word] += 1
+
 
 		counter_weighted = Counter(count_dict_weighted)
 		common_weighted = counter_weighted.most_common(10)
@@ -53,7 +56,11 @@ def most_common_in_community(component_filepath):
 
 		freqstring_weighted = "\n".join([word_count[0] + ": " + str(word_count[1]) for word_count in common_weighted])
 		freqstring_unweighted = "\n".join([word_count[0] + ": " + str(word_count[1]) for word_count in common_unweighted])
-		return (freqstring_weighted, freqstring_unweighted)
+
+		result.append([freqstring_weighted, freqstring_unweighted])
+
+	print (result)
+	return result
 
 def main():
 	parser = argparse.ArgumentParser()
@@ -62,7 +69,7 @@ def main():
 	args = parser.parse_args()
 	clusterDirectory = args.clusterDirectory
 
-	workbook = xlsxwriter.Workbook('component_common_words.xlsx')
+	workbook = xlsxwriter.Workbook('component_common_words_new_fixed_onlyfacct.xlsx')
 	wrap_format = workbook.add_format({'text_wrap': True})
 
 	community_files = natural_sort(os.listdir(clusterDirectory))
@@ -72,6 +79,7 @@ def main():
 		print(file)
 		worksheet = workbook.add_worksheet(file)
 		component_filepath = os.path.join(clusterDirectory, file)
+		"""
 		component_df = pd.read_csv(component_filepath)
 
 		title_list = [title if not pd.isna(title) else "" for title in component_df["article_title"]]
@@ -95,6 +103,19 @@ def main():
 			worksheet.write(i + 1, 1, freqstring, wrap_format)
 
 		most_common_in_community(component_filepath)
+		"""
+		community_frequents = most_common_in_community(component_filepath)
+		worksheet.set_column('A:A', 15)
+		worksheet.set_column('B:B', 25)
+		worksheet.set_column('C:C', 25)
+		worksheet.write('A1', "Community Id")
+		worksheet.write('B1', "Frequent Title Unigrams [Weighted]")
+		worksheet.write('C1', "Frequent Title Unigrams [Unweighted]")
+		for i in range(len(community_frequents)):
+			worksheet.write(i + 1, 0, i)
+			worksheet.write(i + 1, 1, community_frequents[i][0], wrap_format)
+			worksheet.write(i + 1, 2, community_frequents[i][1], wrap_format)
+
 	
 	workbook.close()
 
