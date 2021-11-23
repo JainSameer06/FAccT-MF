@@ -1,17 +1,16 @@
 Paper,Cleaned,CleanedBy,WordsAddedToDict,TyposFixed,WordsRemoved
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/binns18a,1,AFC,1,"literatureincluding,fairnessand,benignonly,egalitarianismthe,groupeg,makerthat,example-or,casesoftenimpactmight,varietiesin,lippertrasmussen,vis—vis,selectionboth",h-
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/barabas18a,1,AFC,1,,
-,,,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/buolamwini18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/burke18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/chouldechova18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/datta18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/dwork18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/ekstrand18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/ekstrand18b,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/ensign18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/kamishima18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/madaan18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/menon18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/phillips18a,1,AFC,,,
-/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/speicher18a,1,AFC,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/binns18a,1,AFC,1,"literatureincluding,fairnessand,benignonly,egalitarianismthe,groupeg,makerthat,example-or,casesoftenimpactmight,varietiesin,lippertrasmussen,vis—vis,selectionboth","h,-"
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/barabas18a,1,AFC,1,"predictionsreframing,statisticallydriven,doubleencoding,predictionoriented,riskneeds,hannahmoffat,propensityscore,empiricallygrounded","k,j,cj,-"
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/buolamwini18a,1,AFC,1,"techlightestdarkest,evaluationapril,learningbased","j,ccopyright,nology,-,bbox,f,dm,dflf,dmlm,iiiiii ,ppv,-ppv,perfor,mance"
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/burke18a,1,AFC,1,"smallscale,thirdworld,userfocused,fairnessrelated,itembased,factorizationbased,-dimensional,rrromei,finegrained,filmnoir,documentaryfilmnoir,lenderborrower,providerside, andor,consumerand,providerfairness","ui,j,rij,sij,ku,wikrkj,wii,wik,wr,w,mxm,minw,rwr,λ,diagw,ww,wwi,pt,iu,piwik,ji,lu,wilrlj,rk,j,λwik,λpk,plwil,xik,-,eck,k,pik,ρ,ρk,γ,rr,ρpik,γρu,ndcg,τ,dcg,τρk,logk,epk,π,πρl,ec,ep,"
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/chouldechova18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/datta18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/dwork18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/ekstrand18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/ekstrand18b,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/ensign18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/kamishima18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/madaan18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/menon18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/phillips18a,,,,,
+/home/cooper/src/FAccT-MF/Data/TXTs/CleanedPapers_LDA/2018/speicher18a,,,,,
