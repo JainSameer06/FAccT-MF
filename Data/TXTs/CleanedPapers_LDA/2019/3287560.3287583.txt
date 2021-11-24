@@ -5,7 +5,7 @@ Tintarev∗, Claudia Hau∗
 †Institute for Information Law, University of Amsterdam, The Netherlands
 ‡Amsterdam School of Communication Research, University of Amsterdam, The Netherlands
 d.bountouridis@tudelft.nl,{j.harambam,m.makhortykh}@uva.nl,{m.marrero,n.tintarev,c.hau}@tudelft.nl
-ABSTRACT
+ 
 The growing volume of digital data stimulates the adoption of
 recommender systems in dierent socioeconomic domains, includ-
 ing news industries. While news recommenders help consumers
@@ -763,180 +763,3 @@ as dierent types of users. We are also planning to engage in a
 discourse with content providers to further understand their needs
 and particularities. SIREN will be regularly updated such that a
 number of urgent research questions can be readily answered.
-ACKNOWLEDGMENTS
-This research has been supported by NWA Startimpuls VWData, Delft Data
-Science and NWO project SearchX (639.022.722).
-REFERENCES
-[1] Emily J Bell, Taylor Owen, Peter D Brown, Codi Hauka, and Nushin Rashidian.
-2017. The platform press: How Silicon Valley reengineered journalism. (2017).
-[2] Engin Bozdag and Jeroen van den Hoven. 2015. Breaking the lter bubble:
-democracy and design. Ethics and Information Technology 17, 4 (2015), 249–265.
-[3] Taina Bucher. 2017. ‘Machines don’t have instincts’: Articulating the computa-
-tional in journalism. New Media & Society 19, 6 (2017), 918–933.
-[4] Chien Chin Chen, Yao-Tsung Chen, Yeali Sun, and Meng Chang Chen. 2003. Life
-cycle modeling of news events using aging theory. In Proceedings of the European
-Conference on Machine Learning. Springer, 47–59.
-[5] Stanley Cohen. 2011. Folk devils and moral panics. Routledge.
-[6] Abhinandan S Das, Mayur Datar, Ashutosh Garg, and Shyam Rajaram. 2007.
-Google news personalization: scalable online collaborative ltering. In Proceed-
-ings of the international Conference on World Wide Web. ACM, 271–280.
-[7] Carlos Flavian and Raquel Gurrea. 2006. The choice of digital newspapers:
-inuence of reader goals and user experience. Internet Research 16, 3 (2006),
-231–247.
-[8] Daniel Fleder and Kartik Hosanagar. 2009. Blockbuster culture’s next rise or fall:
-The impact of recommender systems on sales diversity. Management science 55,
-5 (2009), 697–712.
-[9] Daniel M Fleder and Kartik Hosanagar. 2007. Recommender systems and their
-impact on sales diversity. In Proceedings of the ACM Conference on Electronic
-commerce. ACM, 192–199.
-[10] Zeno Gantner, Lucas Drumond, Christoph Freudenthaler, and Lars Schmidt-
-Thieme. 2012. Personalized ranking for non-uniformly sampled items. In Pro-
-ceedings of KDD Cup 2011. 231–247.
-[11] Zeno Gantner, Steen Rendle, Christoph Freudenthaler, and Lars Schmidt-
-Thieme. 2011. MyMediaLite: A Free Recommender System Library. In Proceedings
-of the ACM Conference on Recommender Systems (RecSys 2011).
-[12] R Kelly Garrett, Shira Dvir Gvirsman, Benjamin K Johnson, Yariv Tsfati, Rachel
-Neo, and Aysenur Dal. 2014. Implications of pro-and counterattitudinal informa-
-tion exposure for aective polarization. Human Communication Research 40, 3
-(2014), 309–332.
-[13] Tarleton Gillespie. 2014. The relevance of algorithms. Media technologies: Essays
-on communication, materiality, and society 167 (2014).
-[14] Derek Greene and Pádraig Cunningham. 2006. Practical solutions to the problem
-of diagonal dominance in kernel document clustering. In Proceedings of the
-international Conference on Machine learning. ACM, 377–384.
-[15] Mark Hampton. 2010. The Fourth Estate ideal in journalism history. The Routledge
-companion to news and journalism (2010), 3–12.
-[16] Jaron Harambam, Joris van Hoboken, and Natali Helberger. 2018. Democratizing
-algorithmic news recommenders: How to materialize voice in a technologically
-saturated media ecosystem. Philosophical Transactions of the Royal Society (2018).
-https://doi.org/DOI10.1098/rsta.2018.0088.
-[17] Natali Helberger, Kari Karppinen, and Lucia D’Acunto. 2018. Exposure diversity
-as a design principle for recommender systems. Information, Communication &
-Society 21, 2 (2018), 191–207.
-[18] Matthew Hindman. 2008. The myth of digital democracy. Princeton University
-Press.
-[19] Oliver Hinz and Jochen Eckert. 2010. The impact of search and recommenda-
-tion systems on sales in electronic commerce. Business & Information Systems
-Engineering 2, 2 (2010), 67–77.
-[20] Maximilian Jenders, T Lindhauer, Gjergji Kasneci, Ralf Krestel, and Felix Nau-
-mann. 2015. A serendipity model for news recommendation. In Proceedings of the
-Joint German/Austrian Conference on Articial Intelligence (Künstliche Intelligenz).
-Springer, 111–123.
-[21] Michael Bo Karlsson. 2016. Goodbye politics, hello lifestyle. Changing news
-topics in tabloid, quality and local newspaper websites in the UK and Sweden
-from 2002 to 2012. Observatorio (OBS*) 10, 4 (2016), 150–165.
-[22] Benjamin Kille, Frank Hopfgartner, Torben Brodt, and Tobias Heintz. 2013. The
-plista dataset. In Proceedings of the International News Recommender Systems
-Workshop and Challenge. ACM, 16–23.
-[23] Rob Kitchin. 2017. Thinking critically about and researching algorithms. Infor-
-mation, Communication & Society 20, 1 (2017), 14–29.
-[24] Denis Kotkov, Joseph A Konstan, Qian Zhao, and Jari Veijalainen. 2018. Inves-
-tigating Serendipity in Recommender Systems Based on Real User Feedback.
-(2018).
-[25] Matevž Kunaver and Tomaž Požrl. 2017. Diversity in recommender systems–A
-survey. Knowledge-Based Systems 123 (2017), 154–162.
-[26] D Lagun and M Lalmas. 2016. Understanding and measuring user engagement
-and attention in online news reading. In Proceedings of the ACM International
-Conference on Web Search and Data Mining. 113–122.
-[27] Daniel Lamprecht, Markus Strohmaier, and Denis Helic. 2017. A method for
-evaluating discoverability and navigability of recommendation algorithms. Com-
-putational social networks 4, 1 (2017), 9.
-[28] Neal Lathia, Stephen Hailes, Licia Capra, and Xavier Amatriain. 2010. Temporal
-diversity in recommender systems. In Proceedings of the international ACM SIGIR
-conference on Research and development in information retrieval. ACM, 210–217.
-[29] Sara Leckner. 2012. Presentation factors aecting reading behaviour in readers
-of newspaper media: an eye-tracking perspective. Visual Communication 11, 2
-(2012), 163–184.
-[30] Lei Li, Ding-Ding Wang, Shun-Zhi Zhu, and Tao Li. 2011. Personalized news rec-
-ommendation: a review and an experimental investigation. Journal of computer
-science and technology 26, 5 (2011), 754.
-[31] Lei Li, Li Zheng, Fan Yang, and Tao Li. 2014. Modeling and broadening tempo-
-ral user interest in personalized news recommendation. Expert Systems with
-Applications 41, 7 (2014), 3168–3177.
-[32] Jiahui Liu, Peter Dolan, and Elin Rønby Pedersen. 2010. Personalized news
-recommendation based on click behavior. In Proceedings of the international
-Conference on Intelligent user interfaces. ACM, 31–40.
-[33] Nikos Manouselis and Constantina Costopoulou. 2006. Designing a web-based
-testing tool for multi-criteria recommender systems. Engineering Letters, Special
-Issue on Web Engineering 13, 3 (2006).
-[34] Nikos Manouselis, Riina Vuorikari, and Frans Van Assche. 2007. Simulated
-analysis of MAUT collaborative ltering for learning object recommendation.
-In Proceedings of the Workshop on Social Information Retrieval for Technology
-Enhanced Learning. 27–35.
-[35] Robert K Merton. 1968. The Matthew eect in science: The reward and commu-
-nication systems of science are considered. Science 159, 3810 (1968), 56–63.
-[36] Amy Mitchell, Jerey Gottfried, Elisa Shearer, and Kristine Lu. 2017. How
-Americans encounter, recall and act upon digital news. Pew Research Center
-(2017).
-[37] Amy Mitchell, Galen Stocking, and Katerina Eva Matsa. 2016. Long-form reading
-shows signs of life in our mobile news world. Pew Research Center (2016).
-[38] Judith Möller, Damian Trilling, Natali Helberger, and Bram van Es. 2018. Do not
-blame it on the algorithm: An empirical assessment of multiple recommender
-systems and their impact on content diversity. Information, Communication &
-Society 21, 7 (2018), 959–977.
-[39] Raymond J Mooney and Loriene Roy. 2000. Content-based book recommending
-using learning for text categorization. In Proceedings of the ACM Conference on
-Digital libraries. ACM, 195–204.
-[40] Géraldine Muhlmann. 2010. Journalism for democracy. Polity.
-[41] Rob J Nadolski, Bert Van den Berg, Adriana J Berlanga, Hendrik Drachsler,
-Hans GK Hummel, Rob Koper, and Peter B Sloep. 2009. Simulating light-weight
-personalised recommender systems in learning networks: A case for pedagogy-
-oriented and rating-based hybrid recommendation strategies. Journal of Articial
-Societies and Social Simulation 12, 1 (2009), 4.
-[42] Nic Newman, Richard Fletcher, Antonis Kalogeropoulos, David AL Levy, and
-Rasmus Kleis Nielsen. 2017. Reuters Institute digital news report 2017. (2017).
-[43] Tien T Nguyen, Pik-Mai Hui, F Maxwell Harper, Loren Terveen, and Joseph A
-Konstan. 2014. Exploring the lter bubble: the eect of using recommender
-systems on content diversity. In Proceedings of the international Conference on
-World wide web. ACM, 677–686.
-[44] Gal Oestreicher-Singer and Arun Sundararajan. 2012. Recommendation networks
-and the long tail of electronic commerce. Mis quarterly (2012), 65–83.
-[45] Eli Pariser. 2011. The lter bubble: What the Internet is hiding from you. Penguin
-UK.
-[46] Keunchan Park, Jisoo Lee, and Jaeho Choi. 2017. Deep Neural Networks for
-News Recommendations. In Proceedings of the ACM on Conference on Information
-and Knowledge Management. ACM, 2255–2258.
-[47] Steen Rendle and Lars Schmidt-Thieme. 2009. Factor models for tag recommen-
-dation in bibsonomy. In ECML/PKDD 2008 Discovery Challenge Workshop, part
-of the European Conference on Machine Learning and Principles and Practice of
-Knowledge Discovery in Databases. 235–243.
-[48] Francesco Ricci, Lior Rokach, and Bracha Shapira. 2015. Recommender systems:
-introduction and challenges. In Recommender systems handbook. Springer, 1–34.
-[49] Rory LL Sie, Marlies Bitter-Rijpkema, and Peter B Sloep. 2010. A simulation
-for content-based and utility-based recommendation of candidate coalitions in
-virtual creativity teams. Procedia Computer Science 1, 2 (2010), 2883–2888.
-[50] Natalie Jomini Stroud. 2011. Niche news: The politics of news choice. Oxford
-University Press on Demand.
-[51] Cass R Sunstein. 2018. # Republic: Divided democracy in the age of social media.
-Princeton University Press.
-[52] David Tewksbury. 2003. What do Americans really want to know? Tracking the
-behavior of news readers on the Internet. Journal of communication 53, 4 (2003),
-694–710.
-[53] David Tewksbury, Michelle L Hals, and Allyson Bibart. 2008. The ecacy of news
-browsing: The relationship of news consumption style to social and political
-ecacy. Journalism & Mass Communication Quarterly 85, 2 (2008), 257–272.
-[54] Kjerstin Thorson and Chris Wells. 2015. Curated ows: A framework for mapping
-media exposure in the digital age. Communication Theory 26, 3 (2015), 309–328.
-[55] Takashi Umeda, Manabu Ichikawa, Yuhsuke Koyama, and Hiroshi Deguchi.
-2014. Evaluation of collaborative ltering by agent-based simulation considering
-market environment. Developments in Business Simulation and Experiential
-Learning 36 (2014).
-[56] S Vargas. 2015. Novelty and diversity evaluation and enhancement in recommender
-systems. Ph.D. Dissertation. Ph. D. thesis.
-[57] Canhui Wang, Min Zhang, Liyun Ru, and Shaoping Ma. 2008. Automatic online
-news topic ranking using media focus and user attention based on aging theory.
-In Proceedings of the Conference on Information and knowledge management. ACM,
-1033–1042.
-[58] Magdalena Wojcieszak. 2011. When deliberation divides: Processes underlying
-mobilization to collective action. Communication Monographs 78, 3 (2011), 324–
-346.
-[59] Thierry Worch, Sébastien Lê, Pieter Punter, and Jérôme Pagès. 2012. Construction
-of an Ideal Map (IdMap) based on the ideal proles obtained directly from
-consumers. Food quality and preference 26, 1 (2012), 93–104.
-[60] Qianru Zheng, Chi-Kong Chan, and Horace HS Ip. 2015. An unexpectedness-
-augmented utility model for making serendipitous recommendation. In Proceed-
-ings of the Industrial Conference on Data Mining. Springer, 216–230.
-[61] Ethan Zuckerman. 2013. Digital cosmopolitans: Why we think the Internet connects
-us, why it doesn’t, and how to rewire it. WW Norton & Company.
-[62] F Zuiderveen Borgesius, D Trilling, J Möller, B Bodó, C de Vreese, and N Helberger.
-2016. Should we worry about lter bubbles. Internet Policy Review 5, 1 (2016), 2.
