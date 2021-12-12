@@ -1,29 +1,4 @@
 From Soft Classifiers to Hard Decisions: How fair can we be?
-Ran Canetti
-†
-Boston University and
-Tel Aviv University
-canetti@bu.edu
-Aloni Cohen
-‡
-MIT
-aloni@mit.edu
-Nishanth Dikkala
-§
-MIT
-nishanthd@csail.mit.edu
-Govind Ramnarayan
-¶
-MIT
-govind@mit.edu
-Sarah Scheffler
-∥
-Boston University
-sscheff@bu.edu
-Adam Smith
-∗∗
-Boston University
-ads22@bu.edu
 ABSTRACT
 A popular methodology for building binary decision-making classi-
 fiers in the presence of imperfect information is to first construct a
