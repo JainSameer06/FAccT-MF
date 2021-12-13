@@ -86742,4 +86742,88 @@ alexis
 pauline
 gumbs
 trans-feminist
-# words added by 
+# words added by 3442188.3445864
+single-product
+no-purchase
+# words added by 3442188.3445891
+opioid
+opioids
+machine-predicted
+# words added by 3442188.3445893
+asr
+asrs
+aal
+rule-governed
+habituality
+paraphrasable
+timit
+librispeech
+coraal
+# words added by 3442188.3445908
+often-criticized
+bails
+skipping
+magistrates
+napsa
+dockets
+philadelphias
+presiding
+ror
+stipulations
+nonmonetary
+unsecured
+non-appearance
+pled
+euvrard
+leclerc
+jail-time
+yorks
+detainment
+probit
+probit/logistic
+leniency/severity
+arraignments/bail
+ayres
+bail-bond
+non-dichotomous
+simoiu
+half-normal
+prelease
+half-cauchy
+setting/not
+cash/non-monetary
+crimes/crime
+colinearity
+pennsylvanias
+text-extraction
+docket-summary
+first/second/third
+imbibing
+waived
+hears
+dade
+no-cash-bail
+revoked/forfeited
+explictly
+filing/arrest
+pymc
+prerelease
+gibbs
+log-posterior
+burn-in
+seasons
+co-domain
+re-scaling
+hamiltonian
+metropolis-hastings
+multimodal
+# words added by 3442188.3445926
+computerizing
+ncs
+multiphasic
+mmpi
+trumpeted
+# words added by 3442188.3445929
+musings
+# words added by 3442188.3445942
+deciders
