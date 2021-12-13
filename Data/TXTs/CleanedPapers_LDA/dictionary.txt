@@ -86636,4 +86636,110 @@ overbroad
 # words added from selbst18a
 amounting
 cleaves
+# words added by 3287560.3287593
+dissecting
+acos
+auto-enrolled
+biomarkers
+hbac
+diabetics
+hypertensives
+cardiologists
+# words added from 3351095.3373153
+aggrandized
+deflects
+inter-agency
+surrenders
+derogations
+# words added from 3351095.3373156
+photorealistic
+habitus
+durably
+interiorized
+layering
+connectionist
+revolts
+rumelhart
+mcclelland
+past-tense
+structure-based
+transposable
+vgd
+improvisations
+# words added by 3351095.3375674
+female-coded
+sex-on-its-own
+tina
+non-modular
+# words added by 3351095.3375680
+yoti
+salesforce
+reranking
+brainstorm
+playbook
+# words added by 3351095.3375682
+counseled
+datablacklives
+citizen-science
+if/how
+actualize
+oft-mentioned
+lineages
+# words added by 3351095.3375685
+ai/
+operationalizable
+no-one
+geuskens
+fricker
+cartographies
+# words added by 3351095.3375686
+currently-deployed
+centralizing
+custom/personalized
+adas
+# words added by 3351095.3375688
+discrimination-awareness
+embeddedness
+culturally-informed
+perspectivity
+scripting
+# words added by 3351095.3375689
+small-group
+break-out
+lifted
+computing/technology
+# words added by 3351095.3375691
+aftermaths
+engineer/student
+under-articulated
+# words added by 3351095.3375692
+ctrlzai
+zine
+terrance
+wilkerson
+zines
+self-distributed
+small-circulation
+community-oriented
+cyborgs
+diy
+knowledge-sharing
+community-building
+tablers
+copresent
+fleshed
+# words added by 3351095.3375697
+reboot
+speculating
+non-coercive
+disciplining
+attuning
+for/with
+easy-go-to
+just-worlds
+ever-new
+alexis
+pauline
+gumbs
+trans-feminist
 # words added by 
