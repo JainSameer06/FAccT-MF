@@ -1889,7 +1889,7 @@ TOPIC 17: data-collection/privacy
 0.603 data generated in the continent We constructed the personas through an iterative process based on semi-structured interviews with ten African data experts Our interviewees included individuals working in universities governments startups and think tanks and we focused on data collected and shared for research or policy purposes We first developed open-ended questions guided by our experiences observing and Although the African StoryBook Project can be seen as a powerful example it is also important to acknowledge that limitations and challenges remain for the Ugandan Education system For instance the harms of colonial regimes are not extinguished immediately upon instituting policy reforms The dynamics of the global political economy also continue to pressure national education systems to emphasize teaching and establishing grading or progress standards for students that are measured by English language competency eg standardized tests actuating data sharing practices on the continent The interviews were recorded with permission from the interviewees after which we manually transcribed the audio recordings Next we identified and abstracted central themes challenges and concerns expressed by the interviewees Any information that could be used to identify our interviewees institutions government bodies or communities was removed In addition we only took a particular challenge as
 
 ---------------------------------------------------------------------------
-TOPIC 18: fairness/utility
+TOPIC 18: utility/welfare
 
 ---------------------------------------------------------------------------
 
